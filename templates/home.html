@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recommender</title>
+    <link href="{{ url_for('static', filename='stylesheets/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body class="text-center">
+    <form class="form-signin" action="/result" method="get">
+      <h1 class="h3 mb-3 font-weight-normal">Recommender</h1>
+      <br/>
+      <label for="name" class="sr-only">Name of Media</label>
+      <input name="name" id="name" class="form-control" placeholder="Name of Media" required autofocus>
+      <br/>
+      <select name="type" class="custom-select">
+	<option selected>Choose type of media</option>
+	<option value="movie">Movie</option>
+	<option value="show">TV Show</option>
+	<option value="book">Book</option>
+	<option value="game">Game</option>
+      </select>
+      <br/>
+      <br/>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Recommend</button>
+  </body>
+</html>
+
